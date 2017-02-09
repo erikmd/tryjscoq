@@ -99,7 +99,8 @@ class CoqLayoutClassic {
         this.buttons  = document.getElementById('buttons');
 
         // XXXXXXX: This has to be fixed.
-        this.log_css_rules = document.styleSheets[1].cssRules;
+	// this.log_css_rules = document.styleSheets[1].cssRules; // BEFOREHAND
+        this.log_css_rules = document.styleSheets[2].cssRules;
 
         var flex_container = this.panel.getElementsByClassName('flex-container')[0];
         flex_container.addEventListener('click', evt => { this.panelClickHandler(evt); });
