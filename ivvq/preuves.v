@@ -96,3 +96,32 @@ Theorem rev_involutive :
   rev (rev l) = l.
 Proof.
 Admitted.
+
+(** ** Exercices : preuve de programmes fonctionnels sur les entiers/listes *)
+
+Lemma plus_n_0 : forall n : nat, n + 0 = n.
+Proof.
+Admitted.
+
+Lemma plus_n_Sm : forall n m, n + S m = S (n + m).
+Proof.
+Admitted.
+
+Theorem plus_comm : forall a b, a + b = b + a.
+Proof.
+Admitted.
+
+(* Lemma app_len :
+   (* la longueur de la concaténation de deux listes
+      est la somme des longueurs des listes *)
+ *)
+
+Theorem rev_len :
+  forall T (l : list T), length (rev l) = length l.
+Proof.
+Admitted.
+
+(* Exercices pour les plus rapides :
+ - Prouver quelle est la longueur des listes renvoyées par la fonction hanoi.
+ - Plus difficile : spécifier & prouver que le tri par insertion est correct.
+ *)
