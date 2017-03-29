@@ -3,7 +3,7 @@ From Coq Require Import Init.Prelude Unicode.Utf8.
 From Coq Require Import List. Import ListNotations.
 Set Implicit Arguments.
 
-(** * Preuve assistée en Coq *)
+(** * Preuve assistée par Coq *)
 
 (** Premier exemple de théorème *)
 Parameters (p q : Prop).
@@ -99,7 +99,7 @@ Theorem rev_involutive :
 Proof.
 Admitted.
 
-(** ** Exercices : preuve de programmes fonctionnels sur les entiers/listes *)
+(** * Exercices : preuve de programmes fonctionnels sur les entiers/listes *)
 
 Lemma plus_n_0 : forall n : nat, n + 0 = n.
 Proof.
