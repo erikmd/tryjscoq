@@ -5,9 +5,9 @@ Set Implicit Arguments.
 
 (** Premier exemple de théorème *)
 Parameters (p q : Prop).
-Theorem th0 : p -> (p -> q) -> q.
+Theorem th0 : p -> ((p -> q) -> q).
 Proof.
-  exact (fun x (f : p -> q) => f x).
+  exact (fun (x : p) (f : p -> q) => f x).
 Qed.
 
 Theorem th : p -> (p -> q) -> q.
@@ -64,8 +64,8 @@ Lemma app_nil :
   forall T (l : list T), l = l ++ [].
 Proof.
 induction l.
-  simpl.
-  reflexivity.
+  { simpl.
+    reflexivity. }
 simpl.
 rewrite <- IHl. (* utilise l'hypothèse d'induction *)
 reflexivity.
@@ -85,7 +85,7 @@ Lemma rev_app_distr :
   rev (l1 ++ l2) = rev l2 ++ rev l1.
 Proof.
 induction l1; simpl; intros.
-  apply app_nil.
+{ apply app_nil. }
 rewrite IHl1.
 rewrite app_assoc.
 reflexivity.
